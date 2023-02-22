@@ -11,16 +11,16 @@ NumberTicket = int(input("Введите номер билета: "))
 CheckStr = str(NumberTicket)
 
 if len(CheckStr) == 6:
-    Sum = NumberTicket // 1000
-    FirstSum = Sum // 100 + Sum // 10 % 10 + Sum % 10
-    Sum = NumberTicket % 1000
-    SecondSum = Sum // 100 + Sum // 10 % 10 + Sum % 10
+    FirstSum = int(CheckStr[0]) + int(CheckStr[1]) + int(CheckStr[2])
+    SecondSum = int(CheckStr[3]) + int(CheckStr[4]) + int(CheckStr[5])
 
     if FirstSum == SecondSum:
-        print(f'Cумма первых трех цифр = {FirstSum} Сумма последних трех цифр = {SecondSum}')
+        print(
+            f'Cумма первых трех цифр = {FirstSum} Сумма последних трех цифр = {SecondSum}')
         print('Билет счастливый!')
     else:
-        print(f'Cумма первых трех цифр = {FirstSum} Сумма последних трех цифр = {SecondSum}')
+        print(
+            f'Cумма первых трех цифр = {FirstSum} Сумма последних трех цифр = {SecondSum}')
         print("К сожалению билет не счастливый.")
 else:
     print("Error: Введите шестизначный номер!")
