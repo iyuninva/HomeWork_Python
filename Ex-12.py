@@ -7,8 +7,14 @@
 NumberSum = int(input("Введите сумму чисел X И Y: "))
 NumberСom = int(input("Введите произведение чисел X И Y: "))
 
+FlagStop = True
+
 for i in range(NumberSum):
+    if FlagStop == False:
+        break
     for j in range(NumberСom):
-        if i + j == NumberSum and i + j <= 1000 and i * j == NumberСom and i + j <= 1000:
-                print(i, j)
+        if i + j == NumberSum and i * j == NumberСom:
+                print(f"Число X = {i}, а число Y = {j}")
+                FlagStop = False
+                
 
